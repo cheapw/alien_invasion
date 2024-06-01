@@ -1,2 +1,3 @@
-# 忽略所有的.pyc文件
+__pycache__/
 *.pyc
+*.pyo
