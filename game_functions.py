@@ -4,12 +4,16 @@ from bullet import Bullet
 
 def check_keydown_events(event, ai_settings, screen, ship, bullets):
     """ 响应按键 """
+    print(event.key)
     if event.key == pygame.K_RIGHT:
         ship.moving_right = True
     elif event.key == pygame.K_LEFT:
         ship.moving_left = True
     elif event.key == pygame.K_SPACE:
         fire_bullet(ai_settings, screen, ship, bullets)
+    elif event.key == pygame.K_q:
+        print(event.key)
+        sys.exit()
 
 def check_keyup_events(event, ship):
     """ 响应松开 """
